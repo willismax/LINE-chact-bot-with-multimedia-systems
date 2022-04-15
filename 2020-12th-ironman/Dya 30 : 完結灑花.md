@@ -38,8 +38,8 @@
     - [Day 25 : 用 Python 擷取 PTT 、 匯率及熱門迷因圖實作](https://ithelp.ithome.com.tw/articles/10240191) [![](https://i.imgur.com/pQnQ4tG.png)](https://colab.research.google.com/drive/1-gh9aZEm9f965UvQM1J9W3oi8tUezJAP?usp=sharing)
 - 資料視覺化實作
     - [Day 26 : 用 Python 上傳圖片至 Imgur 圖床](https://ithelp.ithome.com.tw/articles/10241006)
-    - [Day 27 : 股市 K 線 LINE 聊天機器人實作 (功能實作)](https://ithelp.ithome.com.tw/articles/10241574) [![](https://i.imgur.com/pQnQ4tG.png)](https://colab.research.google.com/drive/1nE2ZfZDDJqQqn27PRiTWqrA-H-hcYk_q?usp=sharing)
-    - [Day 28 : 股市 K 線 LINE 聊天機器人實作 (佈署篇)](https://ithelp.ithome.com.tw/articles/10242519)
+    - [Day 27 : 股市 K 線 LINE 聊天機器人實作 (功能實作)](https://ithelp.ithome.com.tw/articles/10241574) [![](https://i.imgur.com/pQnQ4tG.png)](https://colab.research.google.com/drive/1nE2ZfZDDJqQqn27PRiTWqrA-H-hcYk_q)(2022/4/15更新採用`yfinace`模組)
+    - [Day 28 : 股市 K 線 LINE 聊天機器人實作 (佈署篇)](https://ithelp.ithome.com.tw/articles/10242519)(2022/4/15更新採用`yfinace`模組)
     - [Day 29 : 換個 LINE 回應的其他口味 - Flex Message](https://ithelp.ithome.com.tw/articles/10243224)
 - 結語
     - [Dya 30 : 完賽。](https://ithelp.ithome.com.tw/articles/10242827)
@@ -50,7 +50,5 @@
   ![](https://i.imgur.com/BXdtW8L.png)
 - 受限篇幅及步調，盡量每篇控制在一碗泡麵時間可以吸受的知識量，誠然本系列文有許多未盡之處(敲碗下一屆?)，謝謝期間有閱讀及追蹤的幫友，每個點閱、追蹤對作者而言都是前進的動力，真心感謝您。
 ![/images/emoticon/emoticon41.gif](/images/emoticon/emoticon41.gif)
-
-
 
 
