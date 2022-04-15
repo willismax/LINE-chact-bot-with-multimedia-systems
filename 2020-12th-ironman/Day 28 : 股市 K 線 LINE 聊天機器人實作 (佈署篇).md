@@ -56,7 +56,8 @@
         result = translator.translate(text, dest).text
         return result
 
-    import mplfinance as mpf
+    # import mplfinance as mpf
+    import yfinance as yf
     import pandas_datareader.data as web
     import pyimgur
 
@@ -69,7 +70,8 @@
         :date_from :起始日(字串)，格式為YYYY-MM-DD，預設自2020-01-01起。
         """
         stock = str(stock)+".tw"
-        df = web.DataReader(stock, 'yahoo', date_from) 
+        # df = web.DataReader(stock, 'yahoo', date_from) 
+        df = yf.download(stock, date_from) 
         mpf.plot(df,type='candle',mav=(5,20),volume=True, ylabel=stock.upper()+' Price' ,savefig='testsave.png')
         PATH = "testsave.png"
         im = pyimgur.Imgur(IMGUR_CLIENT_ID)
@@ -107,14 +109,15 @@
     if __name__ == "__main__":
         app.run()
     ```
-- `requirements.txt` 也有新增 `mplfinance` 、 `pandas_datareader` 、 `pyimgur` 等3個外部模組，您可以注意到 `pandas_datareader` 的版本居然是 `0.9.0rc1` ，如非指定不會是此版本，此時您會遇到一個難解的坑!
+- `requirements.txt` 也有新增 `yfinace`、`mplfinance` 、 `pandas_datareader` 、 `pyimgur` 等3個外部模組，您可以注意到 `pandas_datareader` 的版本居然是 `0.9.0rc1` ，如非指定不會是此版本，此時您會遇到一個難解的坑!(2022/4/15更新:`pandas_datareader`已知有未修復錯誤，之後的讀者建議採用`yfinace`模組)
     ```python
     Flask==1.1.2
     line-bot-sdk==1.16.0
     gunicorn==20.0.4
     apscheduler==3.6.3
     googletrans==3.0.0
-    mplfinance
+    # mplfinance
+    yfinace
     pandas_datareader==0.9.0rc1
     pyimgur
     ```
@@ -133,7 +136,8 @@
 ### 拆解說明
 - 首先我們將 [Day 27 : 股市K線LINE聊天機器人實作-1](https://ithelp.ithome.com.tw/articles/10241574)已經打包裝好的函數 `plot_stcok_k_chart()` ，加入原來的程式，並且引入3個模組讓 `app.py` 認識以利操作:
     ```python
-    import mplfinance as mpf
+    # import mplfinance as mpf
+    import yfinance as yf
     import pandas_datareader.data as web
     import pyimgur
     ```
@@ -158,9 +162,9 @@
     -  最後透過 `line_bot_api.reply_message(event.reply_token, message)` 將帶有 `event.reply_token` 的訊息 `message` 按照LineBot API 要求組裝，就順利完成啦!
 
 ### 關於坑，說好的坑咧?
-- 首先是引入第三方模組，特別是像 `mplfinance` 、 `pandas_datareader` 這種比較高階(貼近人性使用)的模組，背後相依套件很多，且在 `Colab` 運行正常，結果佈署在 Heroku 時就出錯，還好目前 `pandas_datareader` 的 0.9.0rc 版經測試可用，特別指定引入版本。
+- 首先是引入第三方模組，特別是像 `mplfinance` 、 `pandas_datareader` 這種比較高階(貼近人性使用)的模組，背後相依套件很多，且在 `Colab` 運行正常，結果佈署在 Heroku 時就出錯，還好目前 `pandas_datareader` 的 0.9.0rc 版經測試可用，特別指定引入版本。(2022/4/15更新:`pandas_datareader`已知有未修復錯誤，之後的讀者建議採用`yfinace`模組)
 - 在 Colab 實作範例最終完成的第2個模組，使用者只要輸入`@k <台股代碼> <多少天>` 即可顯示K線圖，但在 Heroku 佈署時一直報錯，都跟資料型別有關，除錯很久後最後佈署採第一個版本，讓使用者輸入 `@k <台股代碼> <起始日>` 或 `@k <台股代碼>` 即可。
-- 另外是 `pandas_datareader` 的資訊來源 `Yahoo! France` ，不見得有全部台股資訊，目前沒做防呆機制，如果 `Yahoo! France` 無此股票資訊，則此功能您的 LINE 會已讀不回。
+- 另外是 `pandas_datareader` 的資訊來源 `Yahoo! France` ，不見得有全部台股資訊，目前沒做防呆機制，如果 `Yahoo! France` 無此股票資訊，則此功能您的 LINE 會已讀不回。(2022/4/15更新:`pandas_datareader`已知有未修復錯誤，之後的讀者建議採用`yfinace`模組)
  ![/images/emoticon/emoticon21.gif](/images/emoticon/emoticon21.gif)
 - 除錯的方式仍然離不開 log 檔查詢錯誤，會提示錯誤的檔名、行數並持續向上追溯更底層的程式，發生問題時至 Heroku 網站查看，或在終端機輸入 `$ heroku logs` 查閱。
     ```python
@@ -169,4 +173,4 @@
   ![](https://i.imgur.com/ckczmwk.png) 
 
 ### 小結 
-您以透過 Python 完成資料擷取、 Flask 伺服器架設、 Line Bot API 功能串接 、 Pandas 資料處理、 matplotlib 資料視覺化， 並且輸出至雲端圖床顯示給使用者，整個多媒體系統 IPO 流程已經走完一遍又一遍，下篇補完一些功能後準備收尾囉，我們下篇見。
+您已透過 Python 完成資料擷取、 Flask 伺服器架設、 Line Bot API 功能串接 、 Pandas 資料處理、 matplotlib 資料視覺化， 並且輸出至雲端圖床顯示給使用者，整個多媒體系統 IPO 流程已經走完一遍又一遍，下篇補完一些功能後準備收尾囉，我們下篇見。
