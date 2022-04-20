@@ -1,6 +1,6 @@
 ## 擷取股價資訊繪製 K 線圖
 > ### NOTE: (責任更新2022/4/15) 
-> `pandas_datareader`的yahoo_finace API遇到尚未修復的問題，參考該github的[issue#916](https://github.com/pydata/pandas-datareader/issues/916)，改採`yfinace`模組即可(已修正以下程式)
+> `pandas_datareader`的yahoo_finace API遇到尚未修復的問題，參考該github的[issue#916](https://github.com/pydata/pandas-datareader/issues/916)，改採`yfinance`模組即可(已修正以下程式)
 - 熟悉的 [Colab支援 ![](https://i.imgur.com/pQnQ4tG.png)](https://colab.research.google.com/drive/1nE2ZfZDDJqQqn27PRiTWqrA-H-hcYk_q)。
 - 股市是個買賣交易搓合的處所，每日股市交易的交易量、股價變化會是觀察的重要指標，在這股海動盪的大航海時代，大致可將股市分為基本面、技術面與籌碼面等三大面向，本次集中在股市的技術面，也就是每日股價的開、高、收、低組成的K線；以平均收盤價計算的5MA、20MA；並結合交易量進行判讀。
 - 較精確的作法是至 [TWSE 臺灣證券交易所](https://www.twse.com.tw/)設法取得相關交易資訊，另外一種做法是至第三方股市資訊平台透過 [Python 資料擷取術](https://ithelp.ithome.com.tw/articles/10238573/draft) 低調的取得所需資訊，取得後透過 `Pandas` 模組清理為可處理的格式，最後再以 `matplotlib` 模組繪圖完成資料視覺化。這樣的過程您應該可以在其他系列文或文章學習，礙於本系列文主軸及篇幅不再贅述，有興趣認識 `Pandas` 操作方式可以參閱我自行翻譯官方的 [10 分鐘 Pandas](https://hackmd.io/@wiimax/10-minutes-to-pandas) 繁體中文文章，最好你10分鐘看得完，根本另外個30天系列文。![/images/emoticon/emoticon37.gif](/images/emoticon/emoticon37.gif)
@@ -11,7 +11,7 @@
 
 ### 實作
 
-- 認識 `pandas-datareader` (2022/4/15更新: 目前該模組yahoo finace API錯誤尚未修復)
+- 認識 `pandas-datareader` (2022/4/15更新: 目前該模組yahoo finance API錯誤尚未修復)
     - 官方網址: https://pydata.github.io/pandas-datareader/
     - `pandas-datareader` 作為 `Pandas` 取得真實世界資料集的 API 介面，以股市交易資訊為主，可以取得的資源包含股價、ETF資訊、歐盟統計、NSDQ 交易資訊、莫斯科交易所(MOEX)歷史資訊、韓國交易所KOSDAQ歷史數據等。
       ![](https://i.imgur.com/GJPJOmh.png)
@@ -35,11 +35,11 @@
     - 您可以查閱該`pandas_datareader.data.DataReader()` 函數的參數設定，還記得嗎? 滑鼠在 Colab 的參數輸入`(`前方停留一下，跳出的提示點選`查看原始碼 Source Code` ，參數設定及使用範例資訊可供閱覽。
       ![](https://i.imgur.com/0j9WweU.png)
 
-- 認識 `yfinace`
+- 認識 `yfinance`
     - 官方Github: https://github.com/ranaroussi/yfinance
     - 目前支援非常豐富，包含加密貨幣bit等，請參閱github了解更多。
         ```
-        # 改以yfinace讀取股價
+        # 改以yfinance讀取股價
         import yfinance as yf
         start = "2022-1-1"
         end = '2022-4-14'
@@ -72,7 +72,7 @@
 
 ### 結合圖床取得股市 K 線圖片連結
 
-- 我們將`pandas-datareader`(2022/4/15改用`yfinace`) 、 `mplfinance` 、 `pyimgur`等3個模組組合包成函數，方便取得K線圖片連結。
+- 我們將`pandas-datareader`(2022/4/15改用`yfinance`) 、 `mplfinance` 、 `pyimgur`等3個模組組合包成函數，方便取得K線圖片連結。
 - 函數-1，第3個參數為自訂資料起始日期(預設2020-01-01起):
     ```python
     #包成函數-1
@@ -149,4 +149,4 @@
 
 
 ## 小結
-在 Python 要熟悉資料操作勢必離不開 `Pandas` 模組，要產生數據圖形也勢必需要認識理解如何運用 `matplotlib` 繪圖，好在有巨人的肩膀可以任我們攀爬延伸，運用 `pandas-datareader`(2022/4/15更新採`yfinace`) 、 `mplfinance` 、 `pyimgur`等 3 個模組迅速解決擷取股市資料、視覺化K線圖表並上傳雲端圖床，下篇我們會佈署為 LINE 聊天機器人功能，我們下篇見。![/images/emoticon/emoticon08.gif](/images/emoticon/emoticon08.gif)
+在 Python 要熟悉資料操作勢必離不開 `Pandas` 模組，要產生數據圖形也勢必需要認識理解如何運用 `matplotlib` 繪圖，好在有巨人的肩膀可以任我們攀爬延伸，運用 `pandas-datareader`(2022/4/15更新採`yfinance`) 、 `mplfinance` 、 `pyimgur`等 3 個模組迅速解決擷取股市資料、視覺化K線圖表並上傳雲端圖床，下篇我們會佈署為 LINE 聊天機器人功能，我們下篇見。![/images/emoticon/emoticon08.gif](/images/emoticon/emoticon08.gif)
