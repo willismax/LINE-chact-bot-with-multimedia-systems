@@ -1,3 +1,4 @@
+[![hackmd-github-sync-badge](https://hackmd.io/_MRGny89Rmi-DgjU820Yfw/badge)](https://hackmd.io/_MRGny89Rmi-DgjU820Yfw)
 Git與Github可以說是資訊人/軟體工程必備技能，Git版控管理程式碼、Github查找/分享/參與開源程式碼都是相當常用但初學者需要熟悉的主題。在[第一天](https://ithelp.ithome.com.tw/articles/10233234)、[第二天](https://ithelp.ithome.com.tw/articles/10233252)定性什麼是多媒體系統、[第三天](https://ithelp.ithome.com.tw/articles/10233530)認識Python開發環境後，本日進入到git版本控制及repo資源庫，並結合後續的開發情境介紹。
 
 ## Git
