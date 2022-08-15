@@ -1,6 +1,9 @@
 什麼是多媒體系統
 ========
 
+
+[![hackmd-github-sync-badge](https://hackmd.io/MiyStAQsTOSPbBXF1OKyIg/badge)](https://hackmd.io/MiyStAQsTOSPbBXF1OKyIg)
+
 -   多媒體系統Multimedia System是指在電腦應用系統中，組合兩種或兩種以上媒體的一種人機互動式資訊交流和傳播媒體，本篇將在[系列文第一天](https://ithelp.ithome.com.tw/articles/10233234)提到的4個主軸簡要說明:
     -   資料的類型。
     -   資料輸入/輸出，以及中間過程的處理程序與方式(實踐IPO流程)。
