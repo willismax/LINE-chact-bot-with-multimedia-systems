@@ -1,3 +1,4 @@
+[![hackmd-github-sync-badge](https://hackmd.io/5kfxJMHQSde3xqu_z9gGkw/badge)](https://hackmd.io/5kfxJMHQSde3xqu_z9gGkw)
 ## MarkDown 語法
 ![](https://i.imgur.com/hLed4Je.png)
 - John Gruber 在 2004 年創造了 Markdown 語言，目的是希望大家使用「易於閱讀、易於撰寫的純文字格式，並選擇性的轉換成有效的XHTML（或HTML）」。
