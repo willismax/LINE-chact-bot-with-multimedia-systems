@@ -1,3 +1,5 @@
+# Day 8 : LINE Notify 訊息推播通知 (Python版)
+
 - 有了用 Google Apps Script(GAS) 創建 LINE Notify 訊息推播通知的寶貴經驗，本篇直接提供 Python 程式碼，直接替換您的權杖即可。但也提供兩中方式，一是用 Google Colab ，如果測試成功可以加到瀏覽器我的最愛吧! 另一種是使用VS CODE在本機執行。如果有疑問， LINE Notify 的權杖申請方式可參考系列文 [Day 6 : 歐逆醬早安，建立LINE Notify推播通知](https://ithelp.ithome.com.tw/users/20121130/articles) 、安裝Python可參考系列文 [Day 3 : Python開發環境及工具介紹](https://ithelp.ithome.com.tw/articles/10233530)，如無疑問我們接著進行。
 - Python 版的 LINE Notify 訊息推播流程與 Google Apps Script(GAS) 的LINE Notify 權杖可以共用，意思是即使您用不同程式開發， LINE Notify API 收到正確格式就會傳送推播訊息囉。
 
