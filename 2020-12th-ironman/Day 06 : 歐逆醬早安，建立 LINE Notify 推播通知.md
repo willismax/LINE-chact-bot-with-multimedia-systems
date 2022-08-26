@@ -1,3 +1,5 @@
+# Day 6 : 歐逆醬早安，建立 LINE Notify 推播通知
+
 LINE Notify 可以當成 LINE 官方幫你把伺服器做掉的通知服務，你不用自己建伺服器，寫好程式後就可以建立起推播(push)通知，雖然只能推播但免費，與LINE@每月500則主動通知免費額度比起來也不錯，以下文章先以 Google Apps Script(GAS)做一個具有定時傳訊功能的機器人。詳細可參閱官方文件 https://notify-bot.line.me/zh_TW/
   ![](https://i.imgur.com/IOMIW4F.png)
   
