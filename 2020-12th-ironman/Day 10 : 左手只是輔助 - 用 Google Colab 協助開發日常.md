@@ -1,5 +1,8 @@
 # Day 10 : 左手只是輔助 - 用 Google Colab 協助開發日常
 
+[![hackmd-github-sync-badge](https://hackmd.io/plNUFNx8QCC3osqU7rOs8g/badge)](https://hackmd.io/plNUFNx8QCC3osqU7rOs8g)
+
+
 程式入門者對程式環境設定一直是個不小的坑與門檻，如果有頻繁在各種桌機、筆電、 OS 系統執行 Python 程式，設定環境費時費力。 Colab 是以雲端網頁呈現的 Python 筆記本形式，類似 Jupyter Notebook，但開啟時其實是幫你開啟一個 Linux 虛擬機，加上可以調用免費 GPU 算力，可以輕鬆達到跨平台使用的目的，也不只是可用於資料科學領域，對於程式日常開發而言也是好幫手。
 
 ## 優缺點比較
