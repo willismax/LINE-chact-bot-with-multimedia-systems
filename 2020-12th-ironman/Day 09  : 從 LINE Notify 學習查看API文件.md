@@ -1,3 +1,5 @@
+# Day 9 : 從 LINE Notify 學習查看API文件
+
 - 上篇 [Day 8](https://ithelp.ithome.com.tw/articles/10234115) 內容已經可以成功運行 LINE Notify 範例，如果再包含文字、貼圖，加上LINE內建網址預覽圖片，很快就可以建構好自己的服務。因為自學者常靠谷哥搜尋教學文即實作，要掌握使用功能**還是得回頭研讀官方文件**，而文件通常不像文章好啃!
 - 好在已經累積 LINE Notify 初步使用經驗與概念，接著我們來拆解研讀API文件，將看文件的習慣作為後續開發與自主學習的基石。
 - 附上今日程式碼的實作成果，另外 LINE Notify 的權杖申請方式可參考系列文 [Day 6 : 歐逆醬早安，建立LINE Notify推播通知](https://ithelp.ithome.com.tw/articles/10233841)。
