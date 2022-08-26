@@ -1,5 +1,8 @@
 # Day 7 : 讓彌豆子妹妹每日喚醒你 ( LINE Notify with GAS )
 
+[![hackmd-github-sync-badge](https://hackmd.io/GM9wqvUPTtyTP9IpKc4uFQ/badge)](https://hackmd.io/GM9wqvUPTtyTP9IpKc4uFQ)
+
+
 在 [Day 6](https://ithelp.ithome.com.tw/articles/10233841) 我們以複製/貼上神技喚醒了妹妹彌豆子，本篇延續 Google Apps Script(GAS) 服務設定定時觸發，讓彌豆子妹妹先養成規律生活，別像雷姆又要躺一季!!系列文後續會移駕至 Python 及入住 Heroku 別墅，本篇接著設定GAS的定時傳送通知吧!
 
 ## 設定定時傳送通知
